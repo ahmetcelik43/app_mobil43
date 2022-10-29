@@ -93,7 +93,7 @@ class _HomePageUIState extends State<DovizPage> {
           Container(
             margin: EdgeInsets.only(top: 15, bottom: 15),
             child: Center(
-              child: Text("Canlı Altın Fiyatları",
+              child: Text("Canlı Döviz Fiyatları",
                   style: const TextStyle(
                       fontWeight: FontWeight.bold, fontSize: 20)),
             ),
@@ -150,11 +150,13 @@ class _HomePageUIState extends State<DovizPage> {
                                   Padding(
                                     padding:
                                         EdgeInsets.only(left: 10, right: 10),
-                                    child: SvgPicture.network(resim,
-                                        height: 20, width: 20),
+                                    child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(5),
+                                        child: SvgPicture.network(resim,
+                                            height: 20, width: 20)),
                                   ),
                                   SizedBox(
-                                      width: 100,
+                                      width: 140,
                                       child: Text(
                                         data[key]["BASLIK"]
                                             .toString()
